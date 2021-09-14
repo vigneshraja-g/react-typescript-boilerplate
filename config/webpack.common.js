@@ -5,6 +5,9 @@ module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      icons: path.resolve(__dirname, '../src/assets/icons'),
+    },
   },
   module: {
     rules: [
