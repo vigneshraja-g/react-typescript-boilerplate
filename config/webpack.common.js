@@ -29,7 +29,23 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: [
+                  { removeViewBox: false },
+                  { removeStyleElement: true },
+                ],
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset/inline',
       },
     ],
