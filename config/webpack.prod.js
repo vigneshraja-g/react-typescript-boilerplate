@@ -11,4 +11,8 @@ module.exports = {
       reportFilename: 'bundle_size.html',
     }),
   ],
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
 }
