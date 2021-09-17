@@ -7,6 +7,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       icons: path.resolve(__dirname, '../src/assets/icons'),
+      components: path.resolve(__dirname, '../src/components'),
     },
   },
   module: {
