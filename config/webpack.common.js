@@ -9,6 +9,9 @@ module.exports = {
       icons: path.resolve(__dirname, '../src/assets/icons'),
       components: path.resolve(__dirname, '../src/components'),
     },
+    fallback: {
+      crypto: false,
+    },
   },
   module: {
     rules: [
