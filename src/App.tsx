@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 import { ThemeProvider } from 'styled-components'
 import useTheme from './themes/useTheme'
 import { GlobalStyle } from './themes/Globalstyle'
@@ -6,6 +7,8 @@ import { Counter } from './Counter'
 import SVGI from 'icons/svg1.svg'
 import Icon from 'components/IconLoader/IconLoader'
 import ToggleMode from './themes/ToggleMode'
+
+import './App.scss'
 
 const Test = React.lazy(() => import('./Test'))
 
@@ -41,6 +44,7 @@ export const App = () => {
         >
           Toggle Zoom
         </button>
+        <Button>test</Button>
       </>
     </ThemeProvider>
   )
