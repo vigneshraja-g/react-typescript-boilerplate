@@ -3,6 +3,7 @@ import 'regenerator-runtime/runtime'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './App'
+import DefaultErrorBoundary from './DefaultErrorBoundary'
 
 if (process.env.NODE_ENV === 'development') {
   import('@axe-core/react').then((axe) => {
@@ -11,7 +12,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DefaultErrorBoundary>
+      <App />
+    </DefaultErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 )
