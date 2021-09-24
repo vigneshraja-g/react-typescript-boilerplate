@@ -1,7 +1,8 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
+import './locales/i18next'
 import { App } from './App'
 import DefaultErrorBoundary from './DefaultErrorBoundary'
 
@@ -13,7 +14,9 @@ if (process.env.NODE_ENV === 'development') {
 ReactDOM.render(
   <React.StrictMode>
     <DefaultErrorBoundary>
-      <App />
+      <Suspense fallback="loading...">
+        <App />
+      </Suspense>
     </DefaultErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
