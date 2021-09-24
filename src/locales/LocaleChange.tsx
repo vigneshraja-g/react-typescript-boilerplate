@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 // import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import { Form } from 'react-bootstrap'
@@ -10,16 +10,19 @@ const languageMap = {
 }
 
 const LanguageSelect = () => {
-  const selected: string = localStorage.getItem('i18nextLng') || 'en'
+  const [selected, setSelected] = useState(
+    localStorage.getItem('i18nextLng') || 'en'
+  )
 
   // const { t } = useTranslation()
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.dir = languageMap[selected].dir
   }, [selected])
 
   function handleChange(e) {
     i18next.changeLanguage(e.target.value)
+    setSelected(e.target.value)
   }
 
   return (
