@@ -4,6 +4,8 @@ module.exports = {
   mode: 'development',
   devtool: 'cheap-module-source-map',
   devServer: {
+    historyApiFallback: true,
+    contentBase: './',
     hot: true,
     open: true,
   },

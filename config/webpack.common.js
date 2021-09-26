@@ -9,6 +9,7 @@ module.exports = {
     alias: {
       icons: path.resolve(__dirname, '../src/assets/icons'),
       components: path.resolve(__dirname, '../src/components'),
+      pages: path.resolve(__dirname, '../src/pages'),
     },
     fallback: {
       crypto: false,
